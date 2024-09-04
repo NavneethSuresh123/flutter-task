@@ -1,8 +1,6 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert'; // For jsonDecode
+import 'dart:convert';
 import 'package:task/home_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -35,13 +33,11 @@ class _LoginPageState extends State<LoginPage> {
       }
 
       if (loginSuccessful) {
-        // Navigate to MyHomePage on successful login
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => const MyHomePage()),
         );
       } else {
-        // Show error message if login fails
         showDialog(
           context: context,
           builder: (context) => const AlertDialog(
@@ -51,7 +47,6 @@ class _LoginPageState extends State<LoginPage> {
         );
       }
     } else {
-      // Handle error if the API call fails
       showDialog(
         context: context,
         builder: (context) => const AlertDialog(

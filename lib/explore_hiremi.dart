@@ -23,7 +23,6 @@ class ExploreHiremi extends StatelessWidget {
 
         const SizedBox(height: 16),
 
-        // Banner Section Content
         Container(
           height: 250,
           color: Colors.blue,

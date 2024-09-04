@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/explore_hiremi.dart';
-import 'package:task/task_bar.dart';// Ensure task_bar.dart defines AppBottomNavigationBar
+import 'package:task/task_bar.dart';
 import 'package:task/job_list.dart';
 import 'package:task/featured_section.dart';
 
@@ -17,9 +17,8 @@ class MyHomePage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, // Align all children to the start
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Profile Section
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -48,25 +47,10 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
 
-              // Banner Section
               const ExploreHiremi(),
 
-              // Featured Section
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                child: const Text(
-                  'Featured Section',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-
-              // Job Category Buttons
               const FeaturedSection(),
 
-              // Latest Opportunities - No individual scrolling
               const JobList(),
             ],
           ),
